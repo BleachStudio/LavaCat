@@ -1,0 +1,70 @@
+{
+  "name": "lavacat",
+  "version": "0.0.1",
+  "description": "An easy-to-use Lavalink client for NodeJS.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [  "dist" ],
+  "scripts": {
+    "build": "tsc",
+    "types": "rtb --dist dist",
+    "lint": "eslint --ext .ts ./src",
+    "docs": "typedoc --json ./docs.json --mode file --excludeProtected --excludePrivate --excludeExternals src/structures",
+    "publish:stable": "yarn build && yarn types && yarn publish --access=public",
+    "publish:beta": "yarn build && yarn types && yarn publish --tag beta --access=public",
+    "ci": "run-s lint build types"
+  },
+  "keywords": [
+    "lavalink",
+    "discord",
+    "music",
+    "bot",
+    "discord.js",
+    "eris",
+    "lavacat"
+  ],
+  "author": "CatLegend",
+  "contributors": [],
+  "license": "Apache-2.0",
+  "repository": "BleachStudio/LavaCat",
+  "bugs": "https://github.com/BleachStudio/LavaCat",
+  "devDependencies": {
+    "@favware/rollup-type-bundler": "^1.0.11",
+    "@types/node": "v16",
+    "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "npm-run-all": "^4.1.5",
+    "typedoc": "^0.23.14",
+    "typedoc-plugin-no-inherit": "^1.4.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@discordjs/collection": "^1.1.0",
+    "tslib": "^2.4.0",
+    "undici": "^5.10.0",
+    "ws": "^8.8.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ]
+  },
+  "homepage": "https://github.com/BleachStudio/LavaCat#readme"
+}
