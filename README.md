@@ -27,7 +27,7 @@
 
 - [Guides](https://lavacat.xyz/guides "LavaCat Guides")
 
-## Prerequisites
+## Prerequisites 
 
 - Java - [Azul](https://www.azul.com/downloads/zulu-community/?architecture=x86-64-bit&package=jdk "Download Azul OpenJDK"), [Adopt](https://adoptopenjdk.net/ "Download Adopt OpenJDK") or [sdkman](https://sdkman.io/install "Download sdkman")
 
